@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_2">
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHorizontal_weight="5"
+        android:id="@+id/edit_left"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/start_text"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHorizontal_weight="5"
+        android:id="@+id/edit_right"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/start_text"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_weight="9"
+        android:gravity="center"
+        android:fontFamily="@font/droid_sans_mono"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/edit_left"
+        app:layout_constraintRight_toLeftOf="@id/edit_right"
+        app:layout_constraintVertical_bias="0.4"
+        android:id="@+id/start_text"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:text="@string/startText"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+    </TextView>
+
+    <Button
+        android:id="@+id/btn_gay"
+        android:layout_width="0dp"
+        android:layout_height="75dp"
+        app:layout_constraintHorizontal_weight="2"
+        android:background="@drawable/button"
+        android:fontFamily="@font/droid_sans_mono"
+        android:textAllCaps="false"
+        android:text="Start"
+        android:elevation="3dp"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/edit_view_right"
+        app:layout_constraintLeft_toRightOf="@id/edit_view_left"
+        android:layout_marginBottom="48dp"/>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHorizontal_weight="1"
+        android:id="@+id/edit_view_left"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/btn_gay"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/btn_gay"
+        android:id="@+id/edit_view_right"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
